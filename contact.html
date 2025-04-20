@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: powderblue;
+            color: white;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 50%;
+            margin: auto;
+            padding: 20px;
+            background-color: #1e1e1e;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+            margin-top: 50px;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #ff5722;
+            color: white;
+            padding: 10px 20px;
+ border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #e64a19;
+        }
+        .social-links a {
+            margin: 0 10px;
+            color: #ff5722;
+            text-decoration: none;
+            font-size: 20px;
+        }
+    </style>
+    <script>
+        function showPopup(event) {
+            event.preventDefault(); // Prevent form submission
+            alert("Your query has been received. We will look into it.");
+            document.querySelector('form').reset(); // Clear the form fields
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Contact Us</h1>
+        <p>Have any questions or feedback? Reach out to us!</p>
+        <form onsubmit="showPopup(event)">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+            </div>
+</body>
+</html>
+
